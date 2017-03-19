@@ -1,0 +1,10 @@
+<body>
+    <h1>Do you really want to delete this message?</h1>
+
+    <form action="/message/{{ message.key.id() }}/delete" method="post">
+        <input name="text" value="{{ message.text }}">
+        <input name="email" value="{{ message.email }}">
+        <input name="name" value="{{ message.name }} ">
+        <button type="submit">YES, delete!</button>
+    </form>
+</body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Filton Guestbook</title>
+    </head>
+
+    <body>
+        <h1>Welcome, welcome - I hope you enjoyed the stac</h1>
+
+        <form method="post" action="/">
+
+            <p>Your name: <input name="name"></p>
+            <p>Your email please: <input name="email"></p>
+            <p>What do you wish to write<input name="text"></p>
+            <button type="submit">Publish</button>
+        </form>
+
+
+        {% if messages %}
+        <h2> Guest Entries </h2>
+        <ul>
+        {% for message in messages %}
+            <p><a href="/message/{{ message.key.id() }}">{{ message.text }} {{ message.name}}</a></p>
+       {% endfor %}
+        </ul>
+        {% endif -%}
+
+
+    </body>
+</html>

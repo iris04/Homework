@@ -1,0 +1,12 @@
+<body>
+    <h1>Entries</h1>
+
+    <p>Message ID: {{ message.key.id() }}</p>
+    <p>Text: {{ message.name }}</p>
+    <p>Text: {{ message.email }}</p>
+    <p>Text: {{ message.text }}</p>
+    <p>Date: {{ message.created }}</p>
+    <a href="/message/{{ message.key.id() }}/edit">Edit message</a>
+    <a href="/message/{{ message.key.id() }}/delete">Delete message</a>
+</body>
+
